@@ -123,7 +123,7 @@ __attribute__((unused))
 // You may add here other checkpoints using the following format:
 // {<block height>, "<block hash>"},
 const std::initializer_list<CheckpointData> CHECKPOINTS = {
-  { 3479, "34a510d363cf60ab14749ae7de09e1f40a7dbc46d25dd6055db52b1eae1e8ec3" },
+  { 3479, "c9f1abf86f62b8ce3497ddfba8a715de2b71da3c97a20e21592aaa123adf98bf" },
 };
 } // CryptoNote
 
