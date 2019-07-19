@@ -22,6 +22,7 @@ you built.
 * Target block time: 60s
 * Money supply: 21000000000000000 atomic units.
 * One atomic unit is called one Sobol
+* 100000000 Sobol are one QST
 * Emission speed Factor = 21
 * The current Block Reward is about 100 Quest and will decrease with an
 emission speed factor of 21.
