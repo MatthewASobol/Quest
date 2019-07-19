@@ -42,6 +42,8 @@ from source by yourself.
 
 Let us build the Darknet together.
 
+Discord: https://discord.gg/Tcv9KtU
+
 ## Building Quest
 
 ### On *nix
