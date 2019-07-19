@@ -8,7 +8,7 @@ in response to certain events.
 
 Condensed from “Disk and Execution MONitor”
 
-Quest(QST) is an experimental digital currency that enables unlinkable and
+Quest (QST) is an experimental digital currency that enables unlinkable and
 untraceable instant payments. Quest uses peer-to-peer technology to operate 
 without any central authority. Transactions are carried out collectively by the
 network.
@@ -19,14 +19,14 @@ diligence in making a secure network and for your support of free and open
 source software development. The Quest experiment is made on the foundation
 you built.
 
-Target block time: 60s
-Money supply: 21000000000000000 atomic units.
-One atomic unit is called one Sobol
-Emission speed Factor = 21
-The current Block Reward is about 100 Quest and will decrease with an
+* Target block time: 60s
+* Money supply: 21000000000000000 atomic units.
+* One atomic unit is called one Sobol
+* Emission speed Factor = 21
+* The current Block Reward is about 100 Quest and will decrease with an
 emission speed factor of 21.
-P2P_DEFAULT_PORT                  = 62518
-RPC_DEFAULT_PORT                  = 62519
+* P2P_DEFAULT_PORT                  = 62518
+* RPC_DEFAULT_PORT                  = 62519
 
 
 QST is a mineable cryptocurrency. There is no ICO, no pre-mining,
