@@ -44,7 +44,33 @@ Let us build the Darknet together.
 
 Discord: https://discord.gg/Tcv9KtU
 
-## Building Quest
+## Running Quest via Docker
+You can build and run Quest via Docker. Run
+```
+docker build -t quest .
+```
+within a directory containing the Quest Dockerfile (e.g. the cloned repository).
+Run the Quest daemon:
+```
+docker run -it -v ~/.Quest:/root/.Quest -v ~/MyQuestFiles:/home  quest
+```
+This will mount your hosts home directory into the container so that you do not lose your blockindices and wallet files when you shut it down.
+
+If your Quest deamon is running in a terminal, run
+```
+docker ps
+```
+in another terminal to find the container ID of the container running the Quest deamon.
+Then you can invoke the wallet application via 
+```
+sudo docker exec -it YOUR_CONTAINER_ID simplewallet
+```
+Before you start using the generated wallet and address, you should make a backup of the files in a seperate location to ensure you do not accidentally delete them. If the container running the Quest daemon did, for whatever reason, not mount your hosts directories correctly, you will lose your wallet file when the container is shut down.
+
+### Note
+The Dockerfile uses a multi-stage build pattern to keep the final image small (~80 MB). The untagged build image (~2 GB), which is used to compile the project can be removed after successful compilation.
+
+## Building Quest from source
 
 ### On *nix
 
@@ -81,7 +107,6 @@ cmake -G "Visual Studio 12 Win64" ..
 ```
 
 And then do Build.
-
 
 With ` ./Questd ` start the daemon, with `sudo ./simplewallet` you can generate a wallet, 
 mine and make transactions.   
