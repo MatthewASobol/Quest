@@ -1,0 +1,130 @@
+$font-stack: 'IBM Plex Sans', sans-serif
+$font-color: #1b1b1b
+$bg: white
+$border-bottom-color: #dedede
+$navbar-bg-color: #dedede
+
+%zerobox
+  padding: 0
+  margin: 0
+
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
+=transition($property)
+  transition: $property
+
+body
+  @extend %zerobox
+  background-color: $bg
+  font-family: $font-stack
+  color: $font-color
+
+div
+  @extend %zerobox
+
+header
+  position: absolute
+  z-index: 999
+
+h1
+  @extend %zerobox
+  box-sizing: content-box
+  position: static
+  font-size: 10vw
+
+h2
+  @extend %zerobox
+  font-size: 2.5vw
+
+.section
+  position: fixed
+  box-sizing: content-box
+  height: 100vh
+  width: 100%
+  
+.content
+  box-sizing: border-box
+  position: absolute
+  top: 45%
+  left: 50%
+  width: 100%
+  padding: 0 20vw
+  z-index: 1
+  +transform(translate(-50%, -45%))
+
+.titletext
+  display: inline-block
+
+.subtitletext
+  position: relative
+  display: inline-block
+  left: 2vw
+
+.rightarrow
+  position: relative
+  left: 0.5vw
+  font-size: 2.5vw !important
+  vertical-align: middle
+
+#down-btn
+  position: fixed
+  box-sizing: border-box
+  bottom: 2%
+  left: 50%
+  +transform(translate(-50%))
+  opacity: 0.1
+  line-height: 0
+
+#up-btn
+  position: fixed
+  box-sizing: border-box
+  top: 2%
+  left: 50%
+  +transform(translate(-50%))
+  opacity: 0.1
+  line-height: 0
+  visibility: hidden
+
+.navigation
+  position: fixed
+  height: auto
+  width: 100%
+
+#section-1
+  visibility: visible
+
+#section-2
+  visibility: hidden
+
+#section-3
+  visibility: hidden
+
+#section-4
+  visibility: hidden
+
+@keyframes fade-in-top
+  from
+    +transform(translate(0, -0.5vw))
+    opacity: 0
+
+@keyframes fade-in-bottom
+  from
+    +transform(translate(0, 0.5vw))
+    opacity: 0
+
+.fading-in-bottom
+  animation: fade-in-bottom 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950) both
+
+.fading-in-top
+  animation: fade-in-top 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950) both
+
+.floating-link
+  display: block
+  color: inherit
+  text-decoration: inherit
+
+  &:hover
+    text-decoration: underline
